@@ -8,11 +8,12 @@ function initialise () {
     var num=parseInt($("#totalPerson").val());
 
     $("#start").click(function(){
+        
     for( var incr=2; incr<=(parseInt($("#totalPerson").val()));incr++){
 
    var fieldsetName =document.createElement('fieldset');
     fieldsetName.classList.add("fieldset"+incr);
-   // fieldsetName.classList.add("hide");
+    fieldsetName.classList.add("hide");
    
     $("#form1").append(fieldsetName);
     $('fieldset.fieldset'+incr).attr('id','fieldset'+incr);

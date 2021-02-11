@@ -1,8 +1,22 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
+    text-align: left;
+    display: block;
+    justify-items: center;
     
 }
+
+
 nav{
     background-color: lightseagreen;
     display: block;
@@ -22,7 +36,7 @@ nav .nav-design h2{
 }
 .body-container{
     background:#fcd6b5;
-    display: block;
+    display: flex;
     align-items: center;
     justify-content: center;
     max-width: 1240px;
@@ -51,11 +65,15 @@ fieldset {
     border: 2px groove (internal value);
   }
 
+  .hide {
+      display: none;
+  }
+
   span.width {
       display: inline-block;
       width: 15em;
   }
-  span.hide{ display: none;}
+  span .hide{ display: none;}
   span.error{color:red;}
  /* .active {background-color: #aea;}
 
