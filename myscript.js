@@ -8,6 +8,8 @@ function initialise () {
     var num=parseInt($("#totalPerson").val());
 
     $("#start").click(function(){
+
+
         
     for( var incr=2; incr<=(parseInt($("#totalPerson").val()));incr++){
 
@@ -22,7 +24,7 @@ function initialise () {
     fieldsetName.appendChild(legend);
     legend.innerHTML='Person '+incr;
 
-//create field for GivenName
+    //create field for GivenName
     var p=document.createElement('p'); //create P tag
     fieldsetName.appendChild(p) //insert P tag
     var label=document.createElement('label'); //create label 
@@ -341,6 +343,55 @@ function initialise () {
 
 
     }
+
+    // make visible first form
+
+    var displayForm= document.getElementById('fieldset1');
+    displayForm.classList.toggle('hide');
+
+    // make rest of the visible one by one
+
+    for(let i=1;i<=(parseInt($("#totalPerson").val()));i++){
+        var field= document.getElementById('fieldset'+i);
+        var  nextBtn=document.getElementById('btn'+i);
+        console.log(nextBtn);
+        if(nextBtn){
+            nextBtn.addEventListener('click', function (){
+             var currentForm= document.getElementById('fieldset'+i);
+             currentForm.classList.toggle('hide');
+               let j=i+1;
+                var nextForm= document.getElementById('fieldset'+j);
+                console.log(nextForm);
+                if(nextForm){
+                   nextForm.classList.toggle('hide');
+                    //var start= document.getElementById('fieldset'+i+1);
+                 }
+                 else {
+                    var dwlForm =document.getElementById('dwlfield');                     
+                    dwlForm.classList.toggle('hide');
+                 }
+            });
+        }
+        
+    }
+
+    var  dwlBtn=document.getElementById('dwlbtn');
+    if(dwlBtn){
+    dwlBtn.addEventListener('click', function (){
+        var dwlForm =document.getElementById('dwlfield');
+        dwlForm.classList.toggle('hide');
+
+        var ratingForm =document.getElementById('ratingForm');                     
+        ratingForm.classList.toggle('hide');
+
+        var sub =document.getElementById('submit1');
+        sub.classList.toggle('hide');
+    
+
+    });
+}
+
+
     
 });
 
@@ -356,13 +407,8 @@ function initialise () {
 
      //trial for next button [Not working]
      
-    //  for(let i=1;i<=num;i++){
-    //     $('#btn'+i).click(function (){
-    //         var start= document.getElementById('fieldset'+i);
-    //          start.toggleClass('class', 'show');
-    //          //var start= document.getElementById('fieldset'+i+1);
-    //  });
-    // }
+    
+
 
      // input type:text validation [not working]
 

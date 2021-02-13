@@ -68,6 +68,9 @@ fieldset {
   .hide {
       display: none;
   }
+  .show {
+      display: block;
+  }
 
   span.width {
       display: inline-block;

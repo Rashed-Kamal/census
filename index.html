@@ -338,7 +338,7 @@
 
                             <!----Part II---->
 
-                            <fieldset class="dwellingfldset1 hide">
+                            <fieldset id="dwlfield" class="dwellingfldset1 hide">
                                 <legend>The Dwelling</legend>
                                 <!----Q.1-->
 
@@ -422,10 +422,14 @@
                                         
                                     </select>
                                 </label><span class="error hide">Please correct this field</span></p>
+
+                                <p><label>
+                                    <button  id="dwlbtn" type="button" name="dwlbtn" value="Continue"> Next btn</button> <!---but this has to be js validtion -->   
+                                 </label></p>
                             </fieldset>
                             <br>
 
-                            <fieldset class="rating hide">
+                            <fieldset id="ratingForm" class="rating hide">
                                 <legend>Rating Questionnaire</legend>
 
                                 <!---Q1-->
@@ -465,7 +469,7 @@
                          
                    
                    
-                    <p><input type="submit" form="form1" class="hide" name="submit1" value="submit"> </p> <!---Actuall submit button--->
+                    <p><input id="submit1" type="submit" form="form1" class="hide" name="submit1" value="submit"> </p> <!---Actuall submit button--->
 
                    
                    
