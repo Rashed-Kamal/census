@@ -24,7 +24,7 @@
             <!----Navigation and Logo will be here---->
             <div class="nav-design">
                 
-                <img src="/images/au_logo3.png" alt="2021 Census information" width="100px" height="110px">
+                <img src="./images/au_logo3.png" alt="2021 Census information" width="100px" height="110px">
                 
                 <h2>2021 Census information</h2>
             </div>
