@@ -34,18 +34,41 @@ nav .nav-design{
 nav .nav-design h2{
     padding: 10px;
 }
+
+a {
+    display: inline-flex;
+    text-decoration: none;
+}
+
+
 .body-container{
     background:#fcd6b5;
     display: flex;
     align-items: center;
     justify-content: center;
     max-width: 1240px;
+    height: 60em;
     padding:15px;
     margin-left: auto;
     margin-right: auto;
     box-shadow: gray 0px 0px 15px;
     position: relative;
    
+}
+
+.blur-body {
+    filter: blur(20%);
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+    box-shadow: 0 5px 30px rgb(0,0,0,.30);
+    transition: 0.5%;
 }
 form{
     display: block;
