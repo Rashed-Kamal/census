@@ -23,26 +23,39 @@
         <nav>
             <!----Navigation and Logo will be here---->
             <div class="nav-design">
+                <a href="index.html">
                 
-                <img src="./images/au_logo3.png" alt="2021 Census information" width="100px" height="110px">
+                <img src="./images/au_logo3.png" alt="2021 Census information" width="105px" height="100px">
                 
-                <h2>2021 Census information</h2>
+                    <h2> 2021 Census information</h2>
+                </a>
             </div>
             
         </nav>
-        <div class="body-container">
+        <div class="body-container" id="body-cont">
             <!---body formating starts from here-->
-            <section>
-                <label>How many people spent the Census night at the dwelling?
-                    <input id="totalPerson" type="number" name="numOfPeople" min="1" max="100"></label>
-                    <input id="start" type="button" value="Start">
+           
+                <div id="intro">
+                    <p>Welcome to Census Data Input. We will collect:
+                        <ul>
+                            <li>personal deatails</li>
+                            <li>Dwelling information</li>
+                            <li>And lastly your experience about using the site</li>
+                        </ul>
+                    </p>
+                
+                    <label>Lets start with - How many people spent the Census night at the dwelling?
+                    <input id="totalPerson" type="number" value="" min="1" max="100"></label>
+                    <button id="start" type="button">Start</button>
                     
-                    
-
-                        <h1>Personal details</h1>
+                </div>
+                
+               
+                    <div>
+                        <!-- <h1>Personal details</h1> --->
                         <form action="https://tau.usq.edu.au/courses/CSC2406/reflect.php" id="form1" method="POST">
                                 <!---Form section will be here---->
-                            <fieldset id="fieldset1" class="fieldset1 show">
+                            <fieldset id="fieldset1" class="fieldset1 hide">
                                 <legend>Person 1</legend>
                                 <!---Q1-->
                                 <p><label><span class="width">Given Name: </span>
@@ -326,9 +339,10 @@
 
                             </fieldset>
                             <br>
+
                             <!----Part II---->
 
-                            <fieldset class="fieldset1 show">
+                            <fieldset id="dwlfield" class="dwellingfldset1 hide">
                                 <legend>The Dwelling</legend>
                                 <!----Q.1-->
 
@@ -412,10 +426,14 @@
                                         
                                     </select>
                                 </label><span class="error hide">Please correct this field</span></p>
+
+                                <p><label>
+                                    <button  id="dwlbtn" type="button" name="dwlbtn" value="Continue"> Next btn</button> <!---but this has to be js validtion -->   
+                                 </label></p>
                             </fieldset>
                             <br>
 
-                            <fieldset class="rating">
+                            <fieldset id="ratingForm" class="rating hide">
                                 <legend>Rating Questionnaire</legend>
 
                                 <!---Q1-->
@@ -448,19 +466,23 @@
                                     <textarea rows="4" cols="50" name="comment">Enter your comments here...</textarea>
                                     </label></p>
 
+                                <p><lebel><input id="submit1" type="submit" form="form1" class="hide" name="submit1" value="submit"></lebel> </p> <!---Actuall submit butto ---->
+
                             </fieldset>
                             <br>
 
+                            
+                            
                         </form>                        
                          
-                   
-                   
-                    <p><input type="submit" form="form1" name="submit1" value="submit"> </p> <!---Actuall submit button--->
-
+                        
+                    </div>
+                    
+                       
                    
                    
                     
-            </section>
+               
             
             </div>
 
