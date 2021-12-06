@@ -20,6 +20,7 @@
         <link rel="stylesheet" type="text/css" href="style.css"/>
     </head>
     <body>
+        <header>
         <nav>
             <!----Navigation and Logo will be here---->
             <div class="nav-design">
@@ -32,6 +33,7 @@
             </div>
             
         </nav>
+        </header>
         <div class="body-container" id="body-cont">
             <!---body formating starts from here-->
            
